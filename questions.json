@@ -1,0 +1,263 @@
+[
+  {
+    "id": 1,
+    "question": "What is the difference between ArrayList and LinkedList in Java?",
+    "answers": [
+      "ArrayList is faster for random access, LinkedList is faster for insertions/deletions",
+      "LinkedList is faster for random access, ArrayList is faster for insertions/deletions",
+      "There is no performance difference between them",
+      "ArrayList is thread-safe, LinkedList is not"
+    ],
+    "correct": 0,
+    "explanation": "ArrayList uses a dynamic array internally, making it efficient for random access (O(1)), but expensive for insertions/deletions (O(n)). LinkedList uses a doubly-linked list, making insertions/deletions efficient (O(1)), but random access slower (O(n)).",
+    "blogLink": "https://www.geeksforgeeks.org/arraylist-vs-linkedlist-java/"
+  },
+  {
+    "id": 2,
+    "question": "What is the purpose of the 'final' keyword in Java?",
+    "answers": [
+      "To make a variable constant and prevent reassignment",
+      "To improve performance",
+      "To enable garbage collection",
+      "To make a class thread-safe"
+    ],
+    "correct": 0,
+    "explanation": "The 'final' keyword in Java makes a variable constant, preventing it from being reassigned after initialization. It can also be used with methods (to prevent overriding) and classes (to prevent inheritance).",
+    "blogLink": "https://www.javatpoint.com/final-keyword"
+  },
+  {
+    "id": 3,
+    "question": "What is method overloading in Java?",
+    "answers": [
+      "Having multiple methods with the same name but different parameters",
+      "Having multiple methods with different names",
+      "Overriding a method from a parent class",
+      "Making a method run faster"
+    ],
+    "correct": 0,
+    "explanation": "Method overloading allows multiple methods with the same name in a class, but with different parameter lists (different types, number, or order of parameters). The compiler determines which method to call based on the arguments provided.",
+    "blogLink": "https://www.programiz.com/java-programming/method-overloading"
+  },
+  {
+    "id": 4,
+    "question": "What will be the output of the following code?",
+    "codeSnippet": [
+      "public class Test {",
+      "    public static void main(String[] args) {",
+      "        String str1 = \"Hello\";",
+      "        String str2 = \"Hello\";",
+      "        String str3 = new String(\"Hello\");",
+      "        ",
+      "        System.out.println(str1 == str2);",
+      "        System.out.println(str1 == str3);",
+      "        System.out.println(str1.equals(str3));",
+      "    }",
+      "}"
+    ],
+    "answers": [
+      "true, false, true",
+      "false, false, true",
+      "true, true, true",
+      "true, false, false"
+    ],
+    "correct": 0,
+    "explanation": "String literals are stored in the string pool, so str1 and str2 reference the same object (== returns true). str3 uses 'new', creating a different object in memory (== returns false), but .equals() compares values, not references (returns true).",
+    "blogLink": "https://www.javatpoint.com/difference-between-==-and-equals-method-in-java"
+  },
+  {
+    "id": 5,
+    "question": "What is the difference between == and .equals() in Java?",
+    "answers": [
+      "== compares references, .equals() compares values",
+      ".equals() compares references, == compares values",
+      "They are exactly the same",
+      "== is for primitives, .equals() is for objects only"
+    ],
+    "correct": 0,
+    "explanation": "The == operator compares memory references (object identity) for objects, while .equals() compares the actual content/values. For primitives, == compares values. For objects, == checks if they point to the same memory location.",
+    "blogLink": "https://www.javatpoint.com/difference-between-==-and-equals-method-in-java"
+  },
+  {
+    "id": 6,
+    "question": "What is the purpose of the 'static' keyword in Java?",
+    "answers": [
+      "To create class-level members that belong to the class rather than instances",
+      "To improve performance",
+      "To prevent inheritance",
+      "To enable multithreading"
+    ],
+    "correct": 0,
+    "explanation": "The 'static' keyword creates class-level members (variables, methods, blocks) that belong to the class itself rather than individual instances. Static members are shared across all instances and can be accessed without creating an object.",
+    "blogLink": "https://www.javatpoint.com/static-keyword-in-java"
+  },
+  {
+    "id": 7,
+    "question": "What will this code output?",
+    "codeSnippet": [
+      "public class Main {",
+      "    static int count = 0;",
+      "    ",
+      "    Main() {",
+      "        count++;", 
+      "    }",
+      "    ",
+      "    public static void main(String[] args) {",
+      "        Main obj1 = new Main();",
+      "        Main obj2 = new Main();",
+      "        Main obj3 = new Main();",
+      "        System.out.println(count);",
+      "    }",
+      "}"
+    ],
+    "answers": [
+      "3",
+      "1",
+      "0",
+      "Compilation error"
+    ],
+    "correct": 0,
+    "explanation": "Since 'count' is static, it's shared among all instances. Each time a Main object is created, the constructor increments the shared static variable. After creating three objects, count becomes 3.",
+    "blogLink": "https://www.javatpoint.com/static-keyword-in-java"
+  },
+  {
+    "id": 8,
+    "question": "What is exception handling in Java?",
+    "answers": [
+      "A mechanism to handle runtime errors using try-catch blocks",
+      "A way to improve code performance",
+      "A method to prevent compilation errors",
+      "A technique to manage memory"
+    ],
+    "correct": 0,
+    "explanation": "Exception handling in Java allows programs to handle runtime errors gracefully using try-catch blocks. It prevents program termination and provides a way to recover from unexpected situations. The try block contains code that might throw an exception, and the catch block handles it.",
+    "blogLink": "https://www.javatpoint.com/exception-handling-in-java"
+  },
+  {
+    "id": 9,
+    "question": "What is the difference between String, StringBuffer, and StringBuilder?",
+    "answers": [
+      "String is immutable, StringBuffer is mutable and thread-safe, StringBuilder is mutable and not thread-safe",
+      "They are all the same",
+      "StringBuffer is immutable, String and StringBuilder are mutable",
+      "StringBuilder is thread-safe, String and StringBuffer are not"
+    ],
+    "correct": 0,
+    "explanation": "String objects are immutable - once created, they cannot be changed. StringBuffer is mutable and thread-safe (synchronized methods), making it suitable for multi-threaded environments. StringBuilder is mutable but not thread-safe, making it faster for single-threaded operations.",
+    "blogLink": "https://www.javatpoint.com/difference-between-string-stringbuffer-and-stringbuilder"
+  },
+  {
+    "id": 10,
+    "question": "What will be the result of this code?",
+    "codeSnippet": [
+      "public class Test {",
+      "    public static void main(String[] args) {",
+      "        StringBuffer sb = new StringBuffer(\"Hello\");",
+      "        sb.append(\" World\");",
+      "        System.out.println(sb);",
+      "        ",
+      "        String s = \"Hello\";",
+      "        s.concat(\" World\");",
+      "        System.out.println(s);",
+      "    }",
+      "}"
+    ],
+    "answers": [
+      "Hello World\nHello",
+      "Hello World\nHello World",
+      "Hello\nHello",
+      "Compilation error"
+    ],
+    "correct": 0,
+    "explanation": "StringBuffer is mutable, so append() modifies the original object - it prints 'Hello World'. String is immutable, so concat() returns a new string but doesn't modify 's'. Since the result of concat() isn't assigned to anything, 's' remains 'Hello'.",
+    "blogLink": "https://www.javatpoint.com/difference-between-string-stringbuffer-and-stringbuilder"
+  },
+  {
+    "id": 11,
+    "question": "What is the Java Virtual Machine (JVM)?",
+    "answers": [
+      "A virtual machine that executes Java bytecode and provides runtime environment",
+      "A compiler that converts Java code to machine code",
+      "An IDE for Java development",
+      "A database management system"
+    ],
+    "correct": 0,
+    "explanation": "The JVM is a virtual machine that executes Java bytecode (.class files) and provides the runtime environment. It translates bytecode into machine code at runtime, handles memory management, and provides platform independence through 'write once, run anywhere' principle.",
+    "blogLink": "https://www.javatpoint.com/jvm-java-virtual-machine"
+  },
+  {
+    "id": 12,
+    "question": "What is the difference between an interface and an abstract class in Java?",
+    "answers": [
+      "Interface supports multiple inheritance, abstract class doesn't; abstract class can have constructors, interface can't",
+      "Abstract class supports multiple inheritance, interface doesn't",
+      "There is no difference between them",
+      "Interface can have constructors, abstract class can't"
+    ],
+    "correct": 0,
+    "explanation": "Interfaces support multiple inheritance (a class can implement multiple interfaces), while abstract classes don't (Java doesn't support multiple class inheritance). Abstract classes can have constructors, instance variables, and both abstract and concrete methods, while interfaces (before Java 8) could only have abstract methods and constants.",
+    "blogLink": "https://www.javatpoint.com/difference-between-abstract-class-and-interface"
+  },
+  {
+    "id": 13,
+    "question": "What is garbage collection in Java?",
+    "answers": [
+      "Automatic memory management that reclaims memory from unused objects",
+      "A manual process to free memory",
+      "A way to compile Java code",
+      "A method to handle exceptions"
+    ],
+    "correct": 0,
+    "explanation": "Garbage collection is Java's automatic memory management system. The JVM automatically identifies and removes objects that are no longer referenced, freeing up memory. This prevents memory leaks and eliminates the need for manual memory management (unlike C/C++).",
+    "blogLink": "https://www.javatpoint.com/Garbage-Collection"
+  },
+  {
+    "id": 14,
+    "question": "What does this code print?",
+    "codeSnippet": [
+      "public class Test {",
+      "    public static void main(String[] args) {",
+      "        int x = 5;",
+      "        System.out.println(x++);",
+      "        System.out.println(++x);",
+      "        System.out.println(x);",
+      "    }",
+      "}"
+    ],
+    "answers": [
+      "5\n7\n7",
+      "6\n7\n7",
+      "5\n6\n6",
+      "6\n6\n6"
+    ],
+    "correct": 0,
+    "explanation": "x++ is post-increment: prints x (5) first, then increments it to 6. ++x is pre-increment: increments x to 7 first, then prints it (7). The final print shows x is 7. Post-increment returns the original value; pre-increment returns the incremented value.",
+    "blogLink": "https://www.javatpoint.com/increment-and-decrement-operators-in-java"
+  },
+  {
+    "id": 15,
+    "question": "What is the output of the following program?",
+    "codeSnippet": [
+      "public class Test {",
+      "    public static void main(String[] args) {",
+      "        try {",
+      "            int arr[] = {1, 2, 3, 4};",
+      "            System.out.println(arr[5]);",
+      "        } catch (ArrayIndexOutOfBoundsException e) {",
+      "            System.out.println(\"Exception caught\");",
+      "        } catch (Exception e) {",
+      "            System.out.println(\"General exception\");",
+      "        }",
+      "    }",
+      "}"
+    ],
+    "answers": [
+      "Exception caught",
+      "General exception",
+      "Runtime error",
+      "Compilation error"
+    ],
+    "correct": 0,
+    "explanation": "Accessing arr[5] throws ArrayIndexOutOfBoundsException (valid indices are 0-3). The more specific catch block for ArrayIndexOutOfBoundsException catches it first, printing 'Exception caught'. The order matters - specific exceptions must be caught before general ones.",
+    "blogLink": "https://www.javatpoint.com/exception-handling-in-java"
+  }
+]

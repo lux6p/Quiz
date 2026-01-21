@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Programming Interview Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="https://yourblog.com" target="_blank" class="blog-top-link" id="blogHeaderLink">
+        Visit My Blog →
+    </a>
+    <div class="container">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <span class="theme-icon">🌓</span>
+        </button>
+        <header>
+            <h1>Java Programming Interview Quiz</h1>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <p class="question-counter" id="questionCounter">Question 1 of 10</p>
+        </header>
+
+        <main>
+            <div class="quiz-container" id="quizContainer">
+                <div class="question-section">
+                    <div class="question-content">
+                        <h2 id="questionText"></h2>
+                        <div class="code-snippet-container" id="codeSnippetContainer"></div>
+                    </div>
+                    <div class="answers-container" id="answersContainer"></div>
+                    <div class="feedback" id="feedback"></div>
+                    <div class="explanation-container" id="explanationContainer"></div>
+                    <div class="blog-link-container" id="blogLinkContainer"></div>
+                </div>
+
+                <div class="navigation-buttons">
+                    <button id="prevBtn" class="btn btn-secondary" disabled>Previous</button>
+                    <button id="nextBtn" class="btn btn-primary">Next</button>
+                </div>
+            </div>
+
+            <div class="results-container" id="resultsContainer" style="display: none;">
+                <h2>Quiz Results</h2>
+                <div class="score-summary">
+                    <div class="score-circle">
+                        <span id="scorePercentage">0%</span>
+                    </div>
+                    <p class="score-text">You scored <span id="scoreValue">0</span> out of <span id="totalQuestions">10</span></p>
+                </div>
+                
+                <div class="results-details" id="resultsDetails"></div>
+                
+                <button id="restartBtn" class="btn btn-primary">Restart Quiz</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
