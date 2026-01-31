@@ -247,6 +247,7 @@ header h1 {
     flex-direction: column;
     flex: 1;
     min-height: 0;
+    position: relative;
 }
 
 .question-section {
@@ -897,30 +898,52 @@ header h1 {
 }
 
 @media (max-width: 768px) {
+    body {
+        padding: 12px;
+        align-items: flex-start;
+        padding-top: 80px;
+    }
+
     .container {
-        padding: 32px 24px;
+        padding: 24px 20px;
         border-radius: 20px;
-    }
-
-    header {
-        margin-bottom: 32px;
-        padding-bottom: 24px;
-    }
-
-    header h1 {
-        font-size: 2rem;
-        margin-bottom: 20px;
+        max-height: calc(100vh - 100px);
     }
 
     .blog-top-link {
-        top: 16px;
-        right: 16px;
-        font-size: 0.8rem;
-        padding: 6px 14px;
+        top: 12px;
+        right: 12px;
+        left: auto;
+        font-size: 0.75rem;
+        padding: 8px 12px;
+        z-index: 1001;
+        position: fixed;
+    }
+
+    .theme-toggle {
+        top: 12px;
+        right: auto;
+        left: 12px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+        z-index: 1001;
+        position: fixed;
+    }
+
+    header {
+        margin-bottom: 24px;
+        padding-bottom: 20px;
+        padding-top: 40px;
+    }
+
+    header h1 {
+        font-size: 1.75rem;
+        margin-bottom: 16px;
     }
 
     .question-section {
-        margin-bottom: 32px;
+        margin-bottom: 20px;
         height: 380px;
         min-height: 380px;
         max-height: 380px;
@@ -956,12 +979,18 @@ header h1 {
     }
 
     .navigation-buttons {
-        flex-direction: column;
-        padding-top: 20px;
+        flex-direction: row;
+        padding-top: 16px;
+        gap: 10px;
+        position: relative;
+        margin-top: auto;
     }
 
     .btn {
-        width: 100%;
+        flex: 1;
+        min-width: 0;
+        padding: 14px 20px;
+        font-size: 0.9rem;
     }
 
     .score-circle {
@@ -1024,14 +1053,52 @@ header h1 {
 @media (max-width: 480px) {
     body {
         padding: 12px;
+        padding-top: 80px;
     }
 
     .container {
-        padding: 24px 20px;
+        padding: 20px 16px;
+        max-height: calc(100vh - 90px);
+    }
+
+    .blog-top-link {
+        top: 10px;
+        right: 10px;
+        font-size: 0.7rem;
+        padding: 6px 10px;
+    }
+
+    .theme-toggle {
+        top: 10px;
+        left: 10px;
+        width: 36px;
+        height: 36px;
+        font-size: 1.1rem;
+    }
+
+    header {
+        padding-top: 35px;
     }
 
     header h1 {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+    }
+
+    .question-section {
+        height: 360px;
+        min-height: 360px;
+        max-height: 360px;
+    }
+
+    .navigation-buttons {
+        padding-top: 12px;
+        gap: 8px;
+    }
+
+    .btn {
+        padding: 12px 16px;
+        font-size: 0.85rem;
     }
 
     .score-circle {

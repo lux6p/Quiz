@@ -218,7 +218,7 @@ function showFeedback(selectedIndex) {
     // Show blog link
     blogLinkContainer.innerHTML = `
         <a href="${question.blogLink}" target="_blank" class="blog-link">
-            Learn more about this topic →
+            Learn more about this topic
         </a>
     `;
     blogLinkContainer.classList.add('show');
